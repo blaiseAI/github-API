@@ -45,16 +45,16 @@ window.addEventListener("load", e => {
   /**
    * Request a github profile info for an individual follower
    */
-  // function onDisplayFollowerData(e) {
-  //   const loginName = e.target.textContent;
-  //   console.log(loginName);
-  //   const githubProfileRequest = async loginName => {
-  //     try {
-  //       var response = await fetch(`https://api.github.com/users/${loginName}`);
-  //       var json = response.json();
-  //       console.log(json);
-  //     } catch (error) {}
-  //   };
-  //   githubProfileRequest(loginName);
+  function onDisplayFollowerData(e) {
+    const loginName = e.target.textContent;
+    console.log(loginName);
+    const githubProfileRequest = async loginName => {
+      try {
+        var response = await fetch(`https://api.github.com/users/${loginName}`);
+        var json = response.json();
+        console.log(json);
+      } catch (error) {}
+    };
+    githubProfileRequest(loginName);
   }
 }); //no code outside
