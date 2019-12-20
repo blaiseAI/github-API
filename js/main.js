@@ -51,7 +51,7 @@ window.addEventListener("load", e => {
     const githubProfileRequest = async loginName => {
       try {
         var response = await fetch(`https://api.github.com/users/${loginName}`);
-        var json = response.json();
+        var json = await response.json();
         console.log(json);
       } catch (error) {}
     };
