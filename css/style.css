@@ -1,0 +1,79 @@
+body {
+  font-family: "Operator Mono", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 1em;
+  background: rgb(240, 239, 239);
+  display: grid;
+  grid-gap: 1em;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+}
+
+h1 {
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header,
+nav,
+main,
+footer {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.form-search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0.5em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1em;
+}
+
+
+.form-search {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(241, 241, 241);
+}
+
+.search-icon {
+  background: #a8ff78;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #78ffd6, #a8ff78);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 0.5em;
+}
+
+::placeholder {
+  font-family: operator Mono;
+}
+
+/* media query for any page over 40em wide do this */
+@media (min-width: 40em) {
+  body {
+    grid-template-columns: 12em 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  header {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    grid-row: span 2;
+  }
+}
