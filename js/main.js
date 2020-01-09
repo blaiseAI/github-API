@@ -1,6 +1,7 @@
 // Application scope
 window.addEventListener("load", e => {
   const displayFollowers = document.querySelector("#followers");
+  const displayAvatar = document.querySelector(".nav");
   const input = document.querySelector("#search");
   const Search = document.querySelector("#submit");
 
@@ -50,9 +51,13 @@ window.addEventListener("load", e => {
     console.log(loginName);
     const githubProfileRequest = async loginName => {
       try {
+        displayAvatar.innerHTML = "";
         var response = await fetch(`https://api.github.com/users/${loginName}`);
         var json = await response.json();
         console.log(json);
+        var profile = document.createElement("img");
+        profile.srcset = `${json.avatar_url}`;
+        displayAvatar.appendChild(profile);
       } catch (error) {}
     };
     githubProfileRequest(loginName);

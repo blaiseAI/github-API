@@ -55,6 +55,14 @@ li {
   padding: 0.5em;
 }
 
+.nav img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+
 ::placeholder {
   font-family: operator Mono;
 }
@@ -75,5 +83,11 @@ li {
 
   nav {
     grid-row: span 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav img {
+    align-self: flex-start;
   }
 }
